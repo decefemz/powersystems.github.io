@@ -1,0 +1,124 @@
+.thumbnail img { height:200px;
+   
+}
+
+.thumbnail{
+    border-radius: 0px;
+    box-shadow: none;
+color:lightgrey;
+width: 200px;
+height: 250px;
+
+}
+/* Thumbnail Box */
+.caption h4 {
+    font-size: 1rem;
+    color: #444;
+    font-family: Montserrat;
+
+    }
+    .caption p {
+        margin-left: 5px;
+        margin-top: 10px;
+        font-family: Montserrat;
+        font-size: 0.75rem;
+        color: #999;
+        }
+        .caption button{
+            margin-top: 30px;
+            padding: 10px 12px;
+        }
+       
+/* Carousel Control */
+.control-box {
+    text-align: right;
+    width: 100%;
+    }
+    .carousel-control{
+        background: var(--mainBlue);
+        border: 0px;
+        border-radius: 0px;
+        display: inline-block;
+        font-size: 40px;
+        font-weight: 200;
+        line-height: 0px;
+        opacity: 1;
+        padding: 10px;
+        position: static;
+        height: 30px;
+        width: 30px;
+        }
+
+
+
+
+
+
+
+.fPH{
+   
+    /* font-family:Montserrat; */
+    padding-left:var(--mainPadding);
+    padding-right:var(--mainPadding);
+
+}
+.fPH h1{
+    font-size: 2.3rem;
+    font-family:Montserrat;
+    /* margin-bottom: 30px; */
+    font-weight: 200;
+}
+
+#divLine{
+    border-top: 2px solid var(--mainRed);
+    width: 100%;
+    height: 1px;
+    margin-right: 20px;
+}
+
+#divCont{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#divCont button{
+    margin: 2px;
+    padding: 5px 10px;
+    font-size: 25px;
+    background-color: var(--mainBlue);
+    border-color: var(--mainBlue);
+}
+    #divCont button:hover{
+        background-color: rgb(17, 17, 88);
+        border-color: rgb(17, 17, 88);
+
+    }
+
+.featuredProducts{
+    margin-top:50px;
+    margin-left: var(--mainPadding);
+    margin-right: var(--mainPadding);
+
+    display: flex;
+    flex-direction: row;
+
+    overflow-x:hidden;
+}
+
+.productCont{
+    margin: 10px;
+    background-color: red;
+    min-width:200px;
+    height: 200px;
+}
+
+.span3{
+    border: solid 1px lightgray;
+    padding:10px;
+    margin-left: 15px;
+    margin-right: 15px;
+    width: 300px;
+    list-style-type:none;
+    height: 390px;
+}

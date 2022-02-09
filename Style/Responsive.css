@@ -1,0 +1,173 @@
+@media ( max-width: 1050px ) {
+    :root {
+        --mainPadding:80px;
+    }
+    .hero{
+        padding-right:var(--mainPadding);
+    }
+}
+
+@media ( max-width: 900px ) {
+    .navLinks a{
+        display:none;
+    }
+  .filters{
+      display: none;
+  }
+
+
+}
+@media ( min-width: 900px ) {
+    #selectCate{
+      display: none;
+    }
+}
+
+
+@media ( max-width: 760px ) {
+	#worksDisplay{
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+    .contactButton{
+        display: none;
+    }
+    :root {
+        --mainPadding:40px;
+    }
+  
+
+
+}
+
+@media ( max-width: 500px ) {
+    #cartList{
+        width: 70%;
+    }
+
+    #navBar{
+        height: 64px;
+    }
+    #hamburger{
+        transform: translateY(0px);
+    }
+
+    .hero h1{
+        font-size: 2rem;
+        line-height: 2.5rem;
+
+    }
+    
+    .product-card button{
+        padding:5px 20px;
+    }
+
+    .hero{
+        background-image: linear-gradient(45deg,  rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)),
+        var(--welcomeImage);
+        height: 600px;
+        animation: heroBack 333s linear alternate-reverse ;
+    }
+
+    @keyframes heroBack {
+        
+        from{
+            background-position-x:50% ;
+        }
+        to{
+            background-position-x: 100%;
+        }
+    }
+
+    .hero h3{
+        line-height: auto;
+    }
+
+  #space{
+      display: none;
+  }
+
+}
+
+
+@media ( min-width: 900px ) {
+    #hamburger{
+        display:none;
+    }
+
+    .sidebarCont{
+        display: none;
+    }
+
+    .sideBar{
+        display: none;
+
+    }
+}
+
+@media ( min-width: 760px ) {
+    #hamburger{
+        transform: translateY(0px);
+
+}
+
+
+
+
+
+
+
+@media ( max-width: 920px ) {
+
+
+
+	
+	.product-card {
+		flex: 1 21%;
+	}
+	
+	.products .product-card:first-child, 
+	.products .product-card:nth-child(2) {
+		flex: 2 46%;
+	}
+	
+}
+
+@media ( max-width: 600px ) {
+
+  
+	.product-card {
+		flex: 1 46%;
+	}
+	
+}
+
+@media ( max-width: 480px ) {
+  
+	.quotecontainer{
+        transform: translateY(-30px);
+    }
+	h1 {
+		margin-bottom: 20px;
+	}
+	
+	.product-filter {
+		flex-direction: column;
+	}
+	
+	.sort {
+		align-self: flex-start;
+	}
+    
+	
+}
+
+
+.products-display{
+    margin: 0 auto;
+    margin-top: 90px;
+	width: 90%;
+	font-family: 'Roboto', sans-serif;
+  }
+}

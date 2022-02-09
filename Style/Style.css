@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+.montserrat {
+font-family: 'Montserrat', sans-serif;
+}
+
+
+:root {
+    --welcomeImage:url('/Images/front.jpg');
+    
+    --mainBlack: #222;
+    --mainTransition: all 0.3s linear;
+    --mainBlue:#001b71;
+    --mainPadding:160px;
+    --mainShadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    --mainRed:#ea002a;}
+
+body{
+    overflow-x: hidden;
+    margin: 0px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;}
+

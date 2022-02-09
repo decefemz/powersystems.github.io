@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Systems Technology-Home</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <link rel="stylesheet" href="/Style/Style.css">
+    <link rel="stylesheet" href="/Style/Navbar.css">
+    <link rel="stylesheet" href="/Style/About.css">
+    <link rel="stylesheet" href="/Style/Hero.css">
+    <link rel="stylesheet" href="/Style/Sponsors-bar.css">
+    <link rel="stylesheet" href="/Style/Footer.css">
+    <link rel="stylesheet" href="/Style/Responsive.css">
+  
+
+    <link rel="stylesheet" href="/Style/FeaturedPoducts.css">
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <script src="/Scripts/Scroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/Scripts/Carousel.js" defer></script>
+    <script src="/Scripts/Buttons.js"></script>
+    <script src="https://kit.fontawesome.com/4a6d3cdf53.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+  <div class="sideBarCont" id = 'sidebarCont'>
+    
+    <div class="sideBar" id = "sideBar">
+      <div>
+        <h1 >MENU</h1>
+        <button onclick="hidesideMenu()" class = 'fas fa-times'></button>
+      </div>
+      <ul>
+        <li><a href="about.html" >ABOUT-US</a></li>
+        <li><a href="contracting.html">CONTRACTING</a></li>
+        <li><a href="products.html">PRODUCTS</a></li>
+
+      </ul>
+    </div>
+  </div>
+  
+
+<div class="getQuoteCont" style="display: none;">
+
+<div class="quotecontainer" >
+  <div class="row header">
+    <h1>NEED A QUOTE? <br>CONTACT US <br> &nbsp;</h1>
+    <h3>Fill out the form below to learn more!</h3>
+  </div>
+  <div class="row body">
+    <form>
+      <div class="names">
+        <div class="name">
+          <label for="first_name">FIRST NAME</label>
+          <input class = "textInput" type = "text" name="first_name" id="" cols="30" rows="1"></textarea>
+        </div>
+        <div class="name">
+          <label for="last_name">LAST NAME</label>
+          <input class = "textInput" name="last_name" id="" cols="30" rows="1"></textarea>
+        </div>
+      </div>
+
+      <div class="name">
+        <label for="email">EMAIL ADDRESS</label>
+        <input class = "textInput" type = "email" name="email" id="" cols="30" rows="1"></textarea>
+      </div>
+
+
+      <div class="name">
+        <label >MESSAGE</label>
+        <textarea style = "height:80px ;"class = "textInput" type = "email" name="email" id="" cols="30" rows="4"></textarea>
+      </div>
+
+      <br>
+      <div class="formButtons">
+        <button>SEND </button>
+        <button id = "seeProducts">SEE PRODUCTS</button>
+      </div>
+    </form>
+  </div>
+</div>
+</div>
+
+
+    <header id = 'navBar' >
+     
+        <img src="/Images/Logo/logo-PST.svg" id="logo">
+        
+        <ul class="navLinks">
+          <!-- <a href="about.html" >ABOUT-US</a> -->
+          <a href="contracting.html">CONTRACTING</a>
+            <a href="products.html">PRODUCTS</a>
+
+            <button class = "contactButton" onclick="smoothScroll(document.getElementById('footer'))">GET IN TOUCH</button>
+            <button id = "hamburger" class = "fas fa-bars" onclick = "revealsideMenu()"></button>
+        </ul>
+    </header>
+
+      <div class="hero">
+        <h1>ELECTRICAL <br>SALES & CONTRACTING</h1>
+        <br><br><br><br>
+        <h3>Thanks to our commitement to quality work, services ans customer satisfaction, Power
+            Systems Technology is one of the areas top electrical sales and contracting company.
+        </h3>
+        <br>
+          
+        <br id = 'space'><br>
+          <div class="butCont">
+            
+              <button>
+                  GET A QUOTE
+              </button>
+              <button onclick="smoothScroll(document.getElementById('about'))" id = "learnMore">
+                  LEARN MORE
+              </button>
+          </div>
+      </div>
+
+  
+
+    <br><br>
+    <div class = "fPH">
+      <h1>Featured Products</h1>
+      <div id="divCont">
+        <hr id = 'divLine'>
+        <button><</button>
+        <button>></button>
+      </div>
+    </div>
+
+    <div class="featuredProducts" id="featuredProducts">
+        
+    </div>
+
+</div>
+
+<div class="container-sp">
+  <div class="sblogos" data-random="true" data-interval="1500" data-keep-alive="4000">
+    <div class="sblogos__row">
+      <div class="sblogos__col">
+        <a href="#" class="sblogos__link"><img class="sblogos__img" src="Logos/3m-2.svg" alt="logo" /></a>
+      </div>
+      <div class="sblogos__col">
+        <a href="#" class="sblogos__link"><img class="sblogos__img" src="Logos/acdc.png" alt="logo" /></a>
+      </div>
+      <div class="sblogos__col">
+        <a href="#" class="sblogos__link"><img class="sblogos__img" src="/Logos/sollatek-new-logo-650px.png" alt="logo" /></a>
+      </div>
+      <div class="sblogos__col">
+        <a href="#" class="sblogos__link"><img class="sblogos__img" src="/Logos/Waco.png" alt="logo" /></a>
+      </div>
+      <div class="sblogos__col">
+        <a href="#" class="sblogos__link"><img class="sblogos__img" src="/Logos/philips.svg" alt="logo" /></a>
+      </div>
+      <div class="sblogos__col">
+        <a href="#" class="sblogos__link"><img class="sblogos__img" src="/Logos/osram-logo.svg" alt="logo" /></a>
+      </div>
+     
+    </div>
+  </div>
+</div>
+
+
+    <section class="about" id = 'about'>
+        <!-- <div class="icoCont"> -->
+            <!-- <img src="/Images/houseIcon.svg" alt="" srcset=""> -->
+        <!-- </div>
+        <h1>
+            <br>
+            
+            WHY WE SHOULD BE YOUR</br>
+                - TOP CHOICE -
+        </h1>
+        <br>
+        <br>
+        <h2>As Power Systems Technology, our aim is to offer you good electrical
+            solutions at competitive prices and the highest quality available.
+            Choose us for products and services you can depend on fully!
+        </h2> -->
+
+            
+    </section>
+
+  
+
+   
+      <footer class="site-footer" id = "footer">
+       <div class="mapCont">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14981.209582288511!2d28.5818957!3d-20.163131!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe10617644d22ebb5!2sPower%20Systems%20Technology!5e0!3m2!1sen!2szw!4v1644220022129!5m2!1sen!2szw" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+       </div>
+       <div class="footerCont">
+            <div class="footerItemCont">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>NO.4 WALLABY COURT <br> Between Jason Moyo & Fife Street, <br> 14th Avenue <br>Bulawayo, Zimbabwe</p>
+              </div>
+            <div class="footerItemCont">
+                <i class="fas fa-phone"></i>
+                <p> <br> TELL: (+263 292) 884 552 <br> <br> CELL: (+263) 71 419 2700 <br> </p>
+            </div>
+            <div class="footerItemCont">
+                <i class="fas fa-clock"></i>
+                <p>BUSINESS HOURS: <br> WEEKDAYS: 0700hrs to 1700hrs <br> SATURDAYS: 0700hrs to 1700hrs <br> SUNDAYS: Closed </p>
+            </div>
+       </div>
+       <div class="cc">© 2022 Power Systems Technology by <a href="#" >Femayi</a> </div>
+  </footer>
+</body>
+</html>

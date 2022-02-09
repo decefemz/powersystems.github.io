@@ -1,0 +1,29 @@
+#worksDisplay{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    justify-content: center;
+    align-items: center;
+}
+    
+.work{
+    /* margin:20px;*/
+    /* width: 300px;
+    height: 300px; */
+}
+
+.work img{
+    width: 100%;
+}
+
+.workDisplayCont{
+    padding: var(--mainPadding);
+
+}
+
+#description{
+    position: absolute;
+    background-color: red;
+    width: 100%;
+    z-index: 1;
+
+}
