@@ -9,7 +9,6 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
     <link rel="stylesheet" href="Style.css">
     <link rel="stylesheet" href="Style/Navbar.css">
     <link rel="stylesheet" href="Style/About.css">
@@ -18,39 +17,52 @@
     <link rel="stylesheet" href="Style/Footer.css">
     <link rel="stylesheet" href="Style/FeaturedPoducts.css">
     <link rel="stylesheet" href="Style/Responsive.css">
-  
 
 
     <script src="Scripts/Scroll.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="Scripts/Carousel.js" defer></script>
     <script src="Scripts/Buttons.js"></script>
-    <script src="https://kit.fontawesome.com/4a6d3cdf53.js" crossorigin="anonymous"></script>
+    <script src="Scripts/Sidebar.js" defer></script>
+    <script src = "Scripts/products.js"></script>
+
+    <script src="https://kit.fontawesome.com/54081d16ec.js" crossorigin="anonymous"></script>
 
 </head>
 
-<body>
 
-  <div class="sideBarCont" id = 'sidebarCont'>
-    
+<body id = 'body'>
+
+  <div class="darkenBG" id = 'darkenBG'> </div>
     <div class="sideBar" id = "sideBar">
       <div>
         <h1 >MENU</h1>
-        <button onclick="hidesideMenu()" class = 'fas fa-times'></button>
+        <button onclick="hidesideMenu()"'>&#x2715</button>
       </div>
       <ul>
-        <li><a href="about.html" >ABOUT-US</a></li>
-        <li><a href="contracting.html">CONTRACTING</a></li>
-        <li><a href="products.html">PRODUCTS</a></li>
+       
+        <li><a href = "products.html">PRODUCTS ↓</a>
+          <ul id = "sideBarCate">
 
-      </ul>
+          
+          </ul>
+        
+        </li>
+
+        <li><a href="contracting.html">CONTRACTING</a></li>
+
+        <li><a href="about.html" >ABOUT-US</a></li>
+
+     
+
     </div>
-  </div>
+
   
 
-<div class="getQuoteCont" style="display: none;">
+<div class="getQuoteCont" id = "getQuoteCont">
 
 <div class="quotecontainer" >
+  <button id ="closeForm">&#x2715</button>
   <div class="row header">
     <h1>NEED A QUOTE? <br>CONTACT US <br> &nbsp;</h1>
     <h3>Fill out the form below to learn more!</h3>
@@ -81,8 +93,8 @@
 
       <br>
       <div class="formButtons">
-        <button>SEND </button>
-        <button id = "seeProducts">SEE PRODUCTS</button>
+        <button id = 'sendForm'>SEND </button>
+        <button id = "seeProducts" onclick=" openProductsPage()">SEE PRODUCTS</button>
       </div>
     </form>
   </div>
@@ -106,7 +118,7 @@
 
       <div class="hero">
         <h1>ELECTRICAL <br>SALES & CONTRACTING</h1>
-        <br><br><br><br>
+        <br><br><br>
         <h3>Thanks to our commitement to quality work, services ans customer satisfaction, Power
             Systems Technology is one of the areas top electrical sales and contracting company.
         </h3>
@@ -115,12 +127,22 @@
         <br id = 'space'><br>
           <div class="butCont">
             
-              <button>
+              <button onclick="revealQuoteForm()">
                   GET A QUOTE
               </button>
               <button onclick="smoothScroll(document.getElementById('about'))" id = "learnMore">
                   LEARN MORE
               </button>
+          </div>
+          <div class="socials">
+            <s class="fa-solid fa-circle"></s>
+            <i class="fa-solid fa-circle"></i>
+            
+            <button class="fa-brands fa-whatsapp" onclick = "window.open('https://api.whatsapp.com/send/?phone=263714192700&text&app_absent=0','_blank');"></button>
+            <button class = 'fa-brands fa-facebook-f' onclick="window.open('https://www.facebook.com/powersystems2001','_blank');"></a></button>
+            <i class="fa-solid fa-circle"></i>
+            <s class="fa-solid fa-circle"></s>
+
           </div>
       </div>
 

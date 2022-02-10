@@ -40,43 +40,43 @@ async function getAllCategories() {
 }
 
 
-async function getAllMakes() {
-    try {
-      let response = await 
-        fetch("products.json" )
-      const data = await response.json()
-        var productData = data.makes;
+// async function getAllMakes() {
+//     try {
+//       let response = await 
+//         fetch("products.json" )
+//       const data = await response.json()
+//         var productData = data.makes;
       
-      for (let k = 0; k < productData.length; ++k) {
+//       for (let k = 0; k < productData.length; ++k) {
 
-        // <option value="All">All</option>
+//         // <option value="All">All</option>
 
-        const category = document.createElement("a")
+//         const category = document.createElement("a")
 
-        const inpuut = document.createElement("input")
-        inpuut.type = 'checkbox'
+//         const inpuut = document.createElement("input")
+//         inpuut.type = 'checkbox'
 
-        const node = document.createTextNode(productData[k])
+//         const node = document.createTextNode(productData[k])
 
-        category.appendChild(inpuut)
+//         category.appendChild(inpuut)
 
-        category.appendChild(node)
+//         category.appendChild(node)
        
-        category.id = productData[k]
-        category.className = "categoryMakes"
-        const categories = document.getElementById("makes")
-        categories.appendChild(category)
+//         category.id = productData[k]
+//         category.className = "categoryMakes"
+//         const categories = document.getElementById("makes")
+//         categories.appendChild(category)
 
      
-    }
+//     }
 
   
-      productData = data.categories;
-    } catch (err) {
-      console.log(err);
-    }
+//       productData = data.categories;
+//     } catch (err) {
+//       console.log(err);
+//     }
 
-}
+// }
 
 
 function generateProductCard(productID, picturePath, productTitle){
@@ -120,11 +120,40 @@ async function getAllProducts(categoryPath){
 
 
 getAllCategories()
-getAllMakes()
+
+
+
 
 
 getAllProducts('/Products/All.json')
 
+
+
+// document.getElementById('selectCate').value = 'Cables'
+// const categoriesMobile = document.getElementById('selectCate')
+// categoriesMobile.value = 'Cables'
+// document.querySelector('#selectCate').value = 'Solar'
+
+
+
+
+
+if (!(localStorage.getItem("sideBarVar") == " ")){
+  getAllProducts('Products/' + localStorage.getItem("sideBarVar") + '.json')
+  // document.getElementById('selectCate').value = localStorage.getItem("sideBarVar")
+
+  try {
+    //If localStorage supports with the browser
+    if (localStorage) {
+        
+        localStorage.setItem(" ", sideBarVar);
+        console.log("un-cached")
+    }
+}
+catch (err) {
+    console.log(err)
+}
+}
 
 $(document).on('click','.categoryLinks', function(){
    
@@ -136,6 +165,5 @@ $(document).on('click','.categoryLinks', function(){
   function getChosen(chosen) {
       getAllProducts('/Products/' +chosen+'.json')
   }
-
 
 

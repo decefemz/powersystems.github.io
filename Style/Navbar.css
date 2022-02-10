@@ -4,6 +4,7 @@ header{
     padding-right:var(--mainPadding);
     height: 80px;
     box-shadow: var(--mainShadow);
+    background-color: var(--mainWhite);
 }
 .navLinks{
     float: right;
@@ -33,6 +34,7 @@ Button{
     border:solid;
     border-width: 1px;
     border-color: var(--mainRed);
+    transition: var(--mainTransition);
 }
 
 Button:hover{
@@ -57,20 +59,39 @@ transform: translateY(-8px);
 
 }
 
-.sideBarCont{
-    position: fixed;
-
-    /* background-color: #00000000; */
+.darkenBG{
+    position: absolute;
+    background-color: #00000055;
     width: 100%;
     z-index: 1;
     height: 100vh;
+    /* opacity: 1; */
     display: none;
+    transition: var(--mainTransition);
+}
 
+@keyframes darken {
 
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes lighten {
+}
+from{
+    opacity: 1;
+}
+    to{
+        opacity: 0;
+   
 }
 
 .sideBar div{
-    height: 60px;
+    height:40px;
     font-family:Montserrat;
     font-weight: 300;
     display: flex;
@@ -79,26 +100,35 @@ transform: translateY(-8px);
 }
 
 .sideBar div h1{
-    margin-left: 10px;
-    margin-top: 15px;
+    margin-left: 30px;
+    margin-top: 2px;
     font-family:Montserrat;
     font-weight: 400;
     font-size: 27px;
 }
 
 .sideBar div button{
-    /* background-color: white; */
-    /* color:var(--mainBlack); */
-    /* width: 50px; */
-    /* border: none; */
-    /* padding: 20px; */
-    font-size: 20px;
-    margin-left: 85px;
-    /* height: 30px; */
+   
+    font-size: 30px;
+    transform: translateY(-18px);
+    
+    color:black;
+    background-color: var(--mainWhite);
+    border-color: var(--mainWhite);
+    margin-left: 65px;
+    font-family: Montserrat;
+    transition: var(--mainTransition);
 }
+
+.sideBar div button:hover{
+color:var(--mainRed
+)}
+
 .sideBar ul{
     /* transform:translateX(-25px); */
-    margin-top: 40px;
+    margin-top: 10px;
+    
+   
 }
 .sideBar li{
     width: 250px;
@@ -108,22 +138,65 @@ transform: translateY(-8px);
     padding: 20px;
     list-style: none;
     color:var(--mainBlack);
-
+    transition: var(--mainTransition);
 }
 
 .sideBar a{
     font-family:Montserrat;
-
+    padding:20px;
+    width: 100%;
     color:var(--mainBlack);
     text-decoration: none;
 
 
 }
+
+#sideBar a:hover{
+    background-color: var(--whiteHighlight);
+    color:var(--mainRed);
+}
+
+
+#sideBarCate {
+    margin-top: 10px;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    transition: var(--mainTransition);
+}
+@keyframes hideSideBarCate{
+    to{
+    transform: translateY(-1000px);
+    }
+}
+
+#sideBarCate a {
+    /* width: 250px; */
+    /* box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.25); */
+    text-decoration: none;
+    font-size: 15px;
+    padding: 10px;
+
+    font-family:Montserrat;
+
+    color:var(--secondaryBlack);
+    text-decoration: none;
+    transition: var(--mainTransition);
+}
+
+
+
+#sideBarCate a:hover{
+    background-color: var(--whiteHighlight);
+}
+
+
 .sideBar{
     position: fixed;
-    background-color: white;
+    background-color: var(--mainWhite);
+    
     padding-top:20px;
-    /* padding */
+    box-shadow: var(--mainShadow);
     width: 250px;
     z-index: 1;
     /* transform: translateX(250px); */
@@ -156,3 +229,4 @@ transform: translateY(-8px);
     }
 
 }
+

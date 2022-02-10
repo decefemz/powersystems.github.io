@@ -1,11 +1,13 @@
 .hero{
-    background-image: linear-gradient(45deg,  rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0)),
+    background-color: grey;
+
+    background-image: linear-gradient(45deg,  rgba(15, 10, 31, 0.6), rgba(15, 10, 31, 0.6)),
                         var(--welcomeImage);
-    height: 600px;
+    height: fit-content;
     background-position: center;
     background-size: cover;
     padding: var(--mainPadding);
-    padding-right: 40%;
+    padding-right: 30%;
     padding-top:60px;
     padding-bottom: 100px;
     display: flex;
@@ -16,10 +18,11 @@
 
 
 .hero h1{
+  padding-bottom: 20px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 
-    color:white;
-    opacity: .98;
+    color:var(--mainWhite);
+    opacity: 1;
     font-family:Montserrat;
     font-weight:500;
     line-height: 60px;
@@ -27,8 +30,8 @@
     font-size: 3rem;
 }
 .hero h3{
-    color:white;
-    opacity: .8;
+    color:var(--mainWhite);
+    opacity: .7;
     line-height: 35px;
     font-family:Montserrat;
 
@@ -37,20 +40,76 @@
     
 
 }
+.butCont button{
+  border:none;
+
+}
+  
+.socials{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 20px;
+  background-color: var(--mainBlue);
+  
+  background-color: #00000000;
+
+  top:35%;
+}
+
+.socials i{
+  opacity: .4;
+  color: white;
+  font-size: 18px;
+  padding: 5px;
+  transform: translateX(5px);
 
 
+}
+.socials s{
+  opacity: .2;
+  color: white;
+  font-size: 10px;
+  padding: 5px;
+  transform: translateX(9px);
 
-.heroCont{
+
+}
+
+.socials button{
+  padding: 5px;
+  background-color: var(--mainBlue);
+  background-color: #00000000;
+  opacity: .9;
+  font-size: 30px;
+  border:none;
+  transition: var(--mainTransition);
+}
+
+.socials button:nth-child(3):hover{
+  opacity: 1;
+  color:#25D366;
+  font-size: 40px;
+}
+
+.socials button:nth-child(4):hover{
+  opacity: 1;
+  font-size: 40px;
+
+  color:#3b5998;
 }
 
 #learnMore{
     background-color: #ffffff33;
     opacity: .9;
-    border:solid 1px;
-
+    border:none;
+    color:var(--mainWhite);
+  transition: var(--mainTransition);
 }
 
 #learnMore:hover{
+      background-color: #ffffff77;
+  color:black;
     opacity: 1;
 
 }
@@ -76,43 +135,56 @@
     position: fixed;
     display: flex;
     justify-content: center;
+
     align-items: center;
     margin: 0 auto;
     z-index: 1;
     height: 100vh;
     background-color: #00000044;
+    transition: var(--mainTransition);
 }
   
   .quotecontainer{
-    position: fixed;
+    background-color: var(--mainWhite);
+
+    /* position: fixed; */
     z-index: 2;
-    max-width: 510px;
-    min-width: 324px;
-    margin: 50px auto 0px;
-    background-color: #fff;
+    height: fit-content;
+    
+    /* max-width: 510px; */
+    /* min-width: 324px; */
+    /* margin: 50px auto 0px; */
     border: 1px solid #cfcfcf;
     border-bottom: 3px solid #ccc;
+   
   }
   
   .row {
     width: 100%;
     margin: 0 0 1em 0;
     padding: 1rem 2.5em;
+    background-color: var(--mainWhite);
   }
+
   .row.header {
     padding: 3.5em 2.5em;
     padding-bottom:1.5em;
     border-bottom: 1px solid #ccc;
     background: var(--mainBlue);
+background-image: var(--quoteBackground);
+background-size: 20px;
     color: #fff;
   }
   
   .row.header h1, h3{
     font-family:Montserrat;
     font-weight: 300;
+    color:var(--mainWhite)
   }
 
-
+.row.header h3{
+  opacity: .9;
+}
 
   .textInput{
     padding: 12px;
@@ -121,9 +193,15 @@
     margin-top:22px;
     height:40px;
     border:solid 1px;
-    border-color:lightgrey;
+    border-color:var(--whiteHighlight);
   }
-  
+  .textInput:hover{
+    border-color:var(--secondaryBlack);
+
+  }
+
+
+
   .name{
       margin: 5px;
       margin-top: 30px;
@@ -133,8 +211,7 @@
 
  .name label{
     font-family:Montserrat;
-    color: var(--mainBlack);
-    margin-left: 10px;
+    color: var(--secondaryBlack);
  }
 
  .names{
@@ -143,7 +220,30 @@
  }
 
  #seeProducts{
-     background-color: white;
+     background-color: #e1e1e1;
      color:var(--mainBlack);
-     border-color: var(--mainBlue);
+     border:none;
  }
+ #seeProducts:hover{
+  background-color: #cccccc;
+
+ }
+
+ #closeForm{
+   position: absolute;
+   right:5%;
+   top:5%;
+   font-size: 30px;
+   color:var(--mainWhite);
+   background-color: #00000000;
+    border:none;
+   font-family: Montserrat;
+   transition: var(--mainTransition);
+
+ }
+
+
+
+ #closeForm:hover{
+color:var(--mainRed
+)}

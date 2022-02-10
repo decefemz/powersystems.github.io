@@ -14,15 +14,28 @@
   .filters{
       display: none;
   }
+  .contactButton{
+    display: none;
 
+}
 
 }
 @media ( min-width: 900px ) {
     #selectCate{
       display: none;
     }
+   
 }
 
+@media ( min-width: 760px ) {
+    
+    #hamburger{
+        margin-top:8px ;
+    }
+
+   
+
+}
 
 @media ( max-width: 760px ) {
 	#worksDisplay{
@@ -30,16 +43,31 @@
 
     }
 
-    .contactButton{
-        display: none;
-    }
+ 
     :root {
         --mainPadding:40px;
     }
   
+    .socials{
+        
+        flex-direction: row;
+        top:80%
 
+    }
+
+    .socials i{
+        display: none;
+
+
+    }
+    .socials s{
+        display: none;
+    }
 
 }
+
+
+
 
 @media ( max-width: 500px ) {
     #cartList{
@@ -64,9 +92,8 @@
     }
 
     .hero{
-        background-image: linear-gradient(45deg,  rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)),
-        var(--welcomeImage);
-        height: 600px;
+       
+        /* height: 600px; */
         animation: heroBack 333s linear alternate-reverse ;
     }
 
@@ -89,6 +116,7 @@
   }
 
 }
+
 
 
 @media ( min-width: 900px ) {
