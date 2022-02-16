@@ -5,6 +5,17 @@
     .hero{
         padding-right:var(--mainPadding);
     }
+
+    #decor1{
+        display: none
+    }
+
+    #decor2{
+        display: none
+    }
+    #decor3{
+        display: none
+    }
 }
 
 @media ( max-width: 900px ) {
@@ -18,13 +29,18 @@
     display: none;
 
 }
+.slideDetails{
+    width: 100%;
+}
+
 
 }
 @media ( min-width: 900px ) {
     #selectCate{
       display: none;
     }
-   
+ 
+  
 }
 
 @media ( min-width: 760px ) {
@@ -42,27 +58,30 @@
         grid-template-columns: 1fr 1fr;
 
     }
+    .productsCont{
 
- 
+    grid-template-columns: 1fr 1fr;
+    }
+  
     :root {
         --mainPadding:40px;
     }
   
     .socials{
-        
+        display: none;
         flex-direction: row;
         top:80%
 
     }
 
-    .socials i{
+    /* .socials i{
         display: none;
 
 
     }
     .socials s{
         display: none;
-    }
+    } */
 
 }
 
@@ -70,10 +89,54 @@
 
 
 @media ( max-width: 500px ) {
+
+
+    .productsCont{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .quotecontainer{
+        height: fit-content;
+        width: 99%;
+    }
+    .names{
+        display: flex;
+        flex-direction: column;
+    }
+
+  
+    .row.header{
+        padding: 1.5em 2.5em;
+    }
+    .row.header h1{
+        font-size: 28px;    }
+
+        .row.header h3{
+            font-size: 14px;    }
     #cartList{
         width: 70%;
     }
+    
+  .name{
+    margin: 10px;
+}
+.name label{
+    font-size: 14px;    
+ }
 
+ #closeForm{
+    top:3%;
+ 
+  }
+
+  
+
+ 
+ .textInput{
+
+    margin-top:2px;
+    height:40px;
+  }
     #navBar{
         height: 64px;
     }
@@ -91,6 +154,10 @@
         padding:5px 20px;
     }
 
+    .footerCont{
+        display: flex;
+        flex-direction: column;
+    }
     .hero{
        
         /* height: 600px; */
@@ -164,15 +231,21 @@
 
 @media ( max-width: 600px ) {
 
-  
+ 
+
 	.product-card {
 		flex: 1 46%;
 	}
+
 	
 }
 
+
+
 @media ( max-width: 480px ) {
-  
+   
+   
+
 	.quotecontainer{
         transform: translateY(-30px);
     }
@@ -198,4 +271,5 @@
 	width: 90%;
 	font-family: 'Roboto', sans-serif;
   }
+
 }

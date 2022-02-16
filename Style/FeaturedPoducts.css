@@ -29,27 +29,6 @@ height: 250px;
             padding: 10px 12px;
         }
        
-/* Carousel Control */
-.control-box {
-    text-align: right;
-    width: 100%;
-    }
-    .carousel-control{
-        background: var(--mainBlue);
-        border: 0px;
-        border-radius: 0px;
-        display: inline-block;
-        font-size: 40px;
-        font-weight: 200;
-        line-height: 0px;
-        opacity: 1;
-        padding: 10px;
-        position: static;
-        height: 30px;
-        width: 30px;
-        }
-
-
 
 
 
@@ -60,20 +39,28 @@ height: 250px;
     /* font-family:Montserrat; */
     padding-left:var(--mainPadding);
     padding-right:var(--mainPadding);
+    background-image: linear-gradient(180deg, #00000000,rgb(250, 250, 250), var(--background4));
+    background-image: linear-gradient(180deg,  rgba(15, 10, 31, 0), rgb(250, 250, 250)), var(--background4);
 
+                      
 }
 .fPH h1{
     font-size: 2.3rem;
     font-family:Montserrat;
     /* margin-bottom: 30px; */
     font-weight: 200;
+    color:var(--mainBlack);
+    text-justify: center;
+    text-align: center;
 }
-
-#divLine{
-    border-top: 2px solid var(--mainRed);
-    width: 100%;
-    height: 1px;
-    margin-right: 20px;
+.fPH h2{
+    font-size: 1.5rem;
+    font-family:Montserrat;
+    /* margin-bottom: 30px; */
+    font-weight: 200;
+    color:var(--secondaryBlack);
+    text-justify: center;
+    text-align: center;
 }
 
 #divCont{
@@ -99,18 +86,77 @@ height: 250px;
     margin-top:50px;
     margin-left: var(--mainPadding);
     margin-right: var(--mainPadding);
-
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+   
 
-    overflow-x:hidden;
 }
+
+.productsCont{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-gap:10px ;
+    align-items: center;
+    margin-top:50px;
+    margin-left: var(--mainPadding);
+    padding-left: var(--mainPadding);
+    padding-right: var(--mainPadding);
+    margin-right: var(--mainPadding);
+    place-items: center;
+    transition: var(--mainTransition);
+}
+
+.featProd{
+    background-color: white;
+    padding:1px;
+    width: 100%;
+    border:solid 1px var(--whiteHighlight);
+    border-radius:2px;
+}
+.featProd:hover{
+    border-color:#ddd
+}
+.featProd img {
+    width: 100%;
+}
+.featProd button{
+    background-color: #00000000;
+    color:var(--mainBlack);
+    border:none;
+    position: absolute;
+    font-size: 20px;
+    opacity: .6;
+    text-align: right;
+    transition: var(--mainTransition);
+    
+}
+
+.featProd button:hover{
+    opacity: 1;
+}
+
+.featProd .details h2{
+    font-family: Montserrat;
+    font-weight: 200;
+    font-size: 17px;
+    text-align: center;
+    color: var(--mainBlack);
+
+}
+.featProd .details h3{
+    color:var(--secondaryBlack);
+    text-align: center;
+    font-size: 13px;
+
+
+}
+
+
+
 
 .productCont{
     margin: 10px;
-    background-color: red;
-    min-width:200px;
-    height: 200px;
 }
 
 .span3{
@@ -121,4 +167,61 @@ height: 250px;
     width: 300px;
     list-style-type:none;
     height: 390px;
+}
+
+.featuredCategories{
+    padding: calc(var(--mainPadding));
+padding-top: 80px;
+    transition: var(--mainTransition);
+    /* padding-bottom: 50px; */
+}
+
+.featuredCategories h1{
+    font-size: 2.3rem;
+    font-family:Montserrat;
+    /* margin-bottom: 30px; */
+    font-weight: 200;
+    color:var(--mainBlack);
+    text-justify: center;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.carousel .carousel-bullets.bullet-style-square .carousel-bullet {
+    border-radius: 100%;
+    border:none;
+    opacity: .9;
+}
+
+.carousel .carousel-bullets .carousel-bullet.bullet-on {
+    background-color: var(--mainBlue);
+}
+
+.slideDetails{
+    background: var(--mainBlue);
+    opacity: .9;
+    width: 50%;
+    padding: 40px;
+    height: 100%;
+}
+.slideDetails h1{
+    font-size: 2.3rem;
+    font-family:Montserrat;
+    font-weight: 200;
+    color:var(--mainWhite);
+    text-justify: center;
+    text-align: center;
+}
+.slideDetails h2{
+    font-size: 1.5rem;
+    font-family:Montserrat;
+    font-weight: 100;
+    color:var(--whiteHighlight);
+    text-justify: center;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.slide{
+    padding:50px;
 }

@@ -10,20 +10,20 @@
 }
 
 .footerItemCont{
-  background-color: var(--mainBlue);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  padding-top: 50px;
+  padding-top: 5px;
 }
 .footerCont{
   display: flex;
   /* margin-top: 64px; */
 padding:var(--mainPadding);
 padding-top:0;
-  flex-direction: row;
+padding-bottom:50px;
+  flex-direction: column;
 }
 
 .footerCont p{
@@ -31,26 +31,28 @@ padding-top:0;
   font-size: 20px;
   text-align: center;
   margin-top: 50px;
-  color:#e1e1e1;
+  color:var(--mainBlack);
   opacity: .7;
 }
-.footerCont i{
-  color: var(--mainBlue);
- 
-  color: white;
-  opacity: .9;
-    font-size: 100px;
-}
 
-.mapCont{
-  background-color: var(--mainBlue);
-}
+
+.ourDetails h1{
+  font-size: 2.3rem;
+  font-family:Montserrat;
+  /* margin-bottom: 30px; */
+  font-weight: 200;
+  color:var(--mainBlack);
+  text-justify: center;
+  text-align: center;}
 
 .cc{
   background-color: rgb(5, 5, 82);
   text-align: center;
   font-family: Montserrat;
-padding: 10px;
+  color:var(--whiteHighlight);
+padding: 5px;
+box-shadow: var(--mainShadow);
+
 
 }
 

@@ -14,6 +14,7 @@
     flex-direction: column;
     /* align-items: center; */
     justify-content: left;
+    box-shadow: var(--mainShadow);
 }
 
 
@@ -55,6 +56,27 @@
   background-color: #00000000;
 
   top:35%;
+}
+#decor3{
+  opacity: .6;
+  color: white;
+  margin-bottom:2px ;
+  font-size: 20px;
+transform: translateX(-140px) translateY(80px);
+}
+#decor1{
+  opacity: .9;
+  color: white;
+  font-size: 20px;
+  transform: translateY(80px) translateX(-140px);
+
+}
+#decor2{
+  opacity: .6;
+  color: white;
+  font-size: 20px;
+
+  /* transform: translateX(5px); */
 }
 
 .socials i{
@@ -127,21 +149,28 @@
 
 
 
-
-
   
 .getQuoteCont{
     width: 100%;
     position: fixed;
     display: flex;
     justify-content: center;
-
+    display: none;
     align-items: center;
     margin: 0 auto;
     z-index: 1;
     height: 100vh;
     background-color: #00000044;
     transition: var(--mainTransition);
+}
+
+@keyframes getQuoteAnimatiom {
+    from{
+      opacity: 0;
+    }
+    to{
+      opacity: 1;
+    }
 }
   
   .quotecontainer{
@@ -151,9 +180,10 @@
     z-index: 2;
     height: fit-content;
     
-    /* max-width: 510px; */
     /* min-width: 324px; */
     /* margin: 50px auto 0px; */
+    /* width: 100%; */
+    margin: 10px;
     border: 1px solid #cfcfcf;
     border-bottom: 3px solid #ccc;
    

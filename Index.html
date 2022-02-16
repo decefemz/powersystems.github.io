@@ -4,19 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width ,  initial-scale=1.0">
     <title>Power Systems Technology-Home</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+
+<link rel="stylesheet" href="Style/carousel.css">
+
     <link rel="stylesheet" href="Style.css">
+
     <link rel="stylesheet" href="Style/Navbar.css">
     <link rel="stylesheet" href="Style/About.css">
     <link rel="stylesheet" href="Style/Hero.css">
+
     <link rel="stylesheet" href="Style/Sponsors-bar.css">
     <link rel="stylesheet" href="Style/Footer.css">
     <link rel="stylesheet" href="Style/FeaturedPoducts.css">
     <link rel="stylesheet" href="Style/Responsive.css">
+
 
 
     <script src="Scripts/Scroll.js"></script>
@@ -25,7 +31,9 @@
     <script src="Scripts/Buttons.js"></script>
     <script src="Scripts/Sidebar.js" defer></script>
     <script src = "Scripts/products.js"></script>
+    <script src="Scripts/Form.js"></script>
 
+    <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
     <script src="https://kit.fontawesome.com/54081d16ec.js" crossorigin="anonymous"></script>
 
 </head>
@@ -33,7 +41,7 @@
 
 <body id = 'body'>
 
-  <div class="darkenBG" id = 'darkenBG'> </div>
+  <div class="darkenBG" id = 'darkenBG' onclick="hidesideMenu()"> </div>
     <div class="sideBar" id = "sideBar">
       <div>
         <h1 >MENU</h1>
@@ -55,48 +63,49 @@
 
      
 
-    </div>
+  </div>
 
   
 
-<div class="getQuoteCont" id = "getQuoteCont">
+<div class="getQuoteCont" id = "getQuoteCont" onclick="closeGetQuote()">
 
 <div class="quotecontainer" >
-  <button id ="closeForm">&#x2715</button>
+  <button id ="closeForm" onclick="closeGetQuote()">&#x2715</button>
   <div class="row header">
     <h1>NEED A QUOTE? <br>CONTACT US <br> &nbsp;</h1>
-    <h3>Fill out the form below to learn more!</h3>
+    <h3>Fill out the form below</h3>
   </div>
   <div class="row body">
     <form>
       <div class="names">
         <div class="name">
           <label for="first_name">FIRST NAME</label>
-          <input class = "textInput" type = "text" name="first_name" id="" cols="30" rows="1"></textarea>
+          <input class = "textInput" type = "text" name="first_name" id="f_name" cols="30" rows="1"></textarea>
         </div>
         <div class="name">
           <label for="last_name">LAST NAME</label>
-          <input class = "textInput" name="last_name" id="" cols="30" rows="1"></textarea>
+          <input class = "textInput" name="last_name" id="l_name" cols="30" rows="1"></textarea>
         </div>
       </div>
 
       <div class="name">
         <label for="email">EMAIL ADDRESS</label>
-        <input class = "textInput" type = "email" name="email" id="" cols="30" rows="1"></textarea>
+        <input class = "textInput" type = "email" name="email" id="email" cols="30" rows="1"></textarea>
       </div>
 
 
       <div class="name">
         <label >MESSAGE</label>
-        <textarea style = "height:80px ;"class = "textInput" type = "email" name="email" id="" cols="30" rows="4"></textarea>
+        <textarea style = "height:80px ;"class = "textInput"  id="message" cols="30" rows="4"></textarea>
       </div>
 
       <br>
+    </form>
       <div class="formButtons">
-        <button id = 'sendForm'>SEND </button>
+        <button id = 'sendForm' onclick="submitForm()">SEND </button>
         <button id = "seeProducts" onclick=" openProductsPage()">SEE PRODUCTS</button>
       </div>
-    </form>
+    
   </div>
 </div>
 </div>
@@ -111,7 +120,7 @@
           <a href="contracting.html">CONTRACTING</a>
             <a href="products.html">PRODUCTS</a>
 
-            <button class = "contactButton" onclick="smoothScroll(document.getElementById('footer'))">GET IN TOUCH</button>
+            <button class = "contactButton" onclick="smoothScroll(document.getElementById('cc'))">GET IN TOUCH</button>
             <button id = "hamburger" class = "fas fa-bars" onclick = "revealsideMenu()"></button>
         </ul>
     </header>
@@ -127,10 +136,10 @@
         <br id = 'space'><br>
           <div class="butCont">
             
-              <button onclick="revealQuoteForm()">
+              <button onclick="openGetQuote()">
                   GET A QUOTE
               </button>
-              <button onclick="smoothScroll(document.getElementById('about'))" id = "learnMore">
+              <button onclick="openAboutPage()" id = "learnMore">
                   LEARN MORE
               </button>
           </div>
@@ -144,23 +153,183 @@
             <s class="fa-solid fa-circle"></s>
 
           </div>
+
+          <div class="fa-solid fa-square" id = "decor3">
+            
+          </div>
+          <div class="fa-solid fa-square" id = "decor1">
+            
+            <div class="fa-solid fa-square" id = "decor2">
+            
+            </div>
+          </div>
+          
       </div>
 
   
 
-    <br><br>
     <div class = "fPH">
-      <h1>Featured Products</h1>
+
+      <br><br>
+
+      <br>
+      <h1>•Featured Products•</h1>
+      <br><br>
+      <h2>See some of the products recomended and hand chosen by our directors that our valued clients cannot get enough of</h2>
       <div id="divCont">
         <hr id = 'divLine'>
-        <button><</button>
-        <button>></button>
+        
       </div>
     </div>
 
-    <div class="featuredProducts" id="featuredProducts">
-        
+    <div class="productsCont">
+        <div class="featProd">
+
+          <img src="Products/Pictures/floodlight.jpg" alt="">
+          <div class = "details">
+            <br>
+            <br>
+            <h2>
+              Slyvania: 30w FloodLight
+            </h2>
+            <h3>$50.00</h3>
+            <br>
+            <br>
+          </div>
+
+      </div>
+      <div class="featProd">
+
+        <img src="Products/Pictures/5kva Invertor.jpg" alt="">
+        <div class = "details">
+          <br>
+          <br>
+          <h2>
+            Growatt: 5KVA Invertor
+          </h2>
+
+          <h3>$9.00</h3>
+          <br>
+          <br>
+        </div>
+
     </div>
+    <div class="featProd">
+
+
+      <img src="Products/Pictures/usb socket.jpg" alt="">
+      <div class = "details">
+        <br>
+        <br>
+        <h2>
+          Mr Electric: 4x4 Socket w/ USB
+        </h2>
+        <h3>$19.00</h3>
+        <br>
+        <br>
+      </div>
+
+  </div>
+  <div class="featProd">
+
+  
+    <img src="Products/Pictures/cable.jpg" alt="">
+    <div class = "details">
+      <br>
+      <br>
+      <h2>
+        2.5mm Cable Red
+      </h2>
+      <h3>$9.00</h3>
+      <br>
+      <br>
+
+    </div>
+
+</div>
+<div class="featProd">
+
+
+  <img src="Products/Pictures/pylontech.jpg" alt="">
+  <div class = "details">
+    <br><br>
+    <h2>
+      Pylontech: US3000c 14KWh 48v 
+    </h2>
+    <h3>$579.00</h3>
+    <br><br>
+  </div>
+
+</div>
+<div class="featProd">
+
+
+  <img src="Products/Pictures/watford1gang.jpg" alt="">
+  <div class = "details">
+    <br><br>
+    <h2>
+      Watford: 2 Gang Switch
+    </h2>
+    <h3>$19.00</h3>
+    <br><br>
+  </div>
+
+</div>
+    </div>
+
+</div>
+<br>
+
+<!-- <div class="featuredCategories" style="display: none;">
+
+    <h1>•Product Categories•</h1>
+
+    <div data-role="carousel" data-controls-on-mouse="true"
+        data-bullet-style="circle"
+        data-period="3000"
+        data-height = "@ (min-width: 992px),500 |(max-width: 992px),300"
+        data-duration="500"
+        data-effect="fade"
+        
+    >
+  
+      <div class="slide" data-cover="Images/featured-image-types-of-solar-panels.jpeg" >
+
+          <div class="slideDetails">
+              <h1>Solar Energy</h1>
+              <h2>Shop our wide range os solar products</h2>
+
+              <button>Shop Now</button>
+          </div>
+      </div>
+      <div class="slide" >
+
+
+      </div>
+      <div class="slide" >
+
+
+      </div>
+  </div>
+
+</div>
+ -->
+ <br><br><br>
+<div class="ourDetails">
+  <h1>•Find Us At•</h1>
+
+  <div class="footerCont">
+
+    <div class="footerItemCont">
+        <p>NO.4 WALLABY COURT <br> Between Jason Moyo & Fife Street, <br> 14th Avenue <br>Bulawayo, Zimbabwe</p>
+      </div>
+    <div class="footerItemCont">
+        <p> <br> TELL: (+263 292) 884 552 <br> <br> CELL: (+263) 71 419 2700 <br> </p>
+    </div>
+    <div class="footerItemCont">
+        <p>BUSINESS HOURS: <br> WEEKDAYS: 0700hrs to 1700hrs <br> SATURDAYS: 0700hrs to 1700hrs <br> SUNDAYS: Closed </p>
+    </div>
+</div>
 
 </div>
 
@@ -190,49 +359,11 @@
   </div>
 </div>
 
+<div id = "cc"class="cc">© 2022 Power Systems Technology by <a href="#" >Femayi</a> </div>
 
-    <section class="about" id = 'about'>
-        <!-- <div class="icoCont"> -->
-            <!-- <img src="/Images/houseIcon.svg" alt="" srcset=""> -->
-        <!-- </div>
-        <h1>
-            <br>
-            
-            WHY WE SHOULD BE YOUR</br>
-                - TOP CHOICE -
-        </h1>
-        <br>
-        <br>
-        <h2>As Power Systems Technology, our aim is to offer you good electrical
-            solutions at competitive prices and the highest quality available.
-            Choose us for products and services you can depend on fully!
-        </h2> -->
-
-            
-    </section>
-
-  
 
    
-      <footer class="site-footer" id = "footer">
-       <div class="mapCont">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14981.209582288511!2d28.5818957!3d-20.163131!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe10617644d22ebb5!2sPower%20Systems%20Technology!5e0!3m2!1sen!2szw!4v1644220022129!5m2!1sen!2szw" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-       </div>
-       <div class="footerCont">
-            <div class="footerItemCont">
-                <i class="fas fa-map-marker-alt"></i>
-                <p>NO.4 WALLABY COURT <br> Between Jason Moyo & Fife Street, <br> 14th Avenue <br>Bulawayo, Zimbabwe</p>
-              </div>
-            <div class="footerItemCont">
-                <i class="fas fa-phone"></i>
-                <p> <br> TELL: (+263 292) 884 552 <br> <br> CELL: (+263) 71 419 2700 <br> </p>
-            </div>
-            <div class="footerItemCont">
-                <i class="fas fa-clock"></i>
-                <p>BUSINESS HOURS: <br> WEEKDAYS: 0700hrs to 1700hrs <br> SATURDAYS: 0700hrs to 1700hrs <br> SUNDAYS: Closed </p>
-            </div>
-       </div>
-       <div class="cc">© 2022 Power Systems Technology by <a href="#" >Femayi</a> </div>
-  </footer>
+  
+     
 </body>
 </html>

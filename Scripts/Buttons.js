@@ -1,14 +1,11 @@
+var isSidebarOpen;
 
 
-function revealQuoteForm(){
-    document.body.style.overflowY = 'hidden'
-    document.getElementById('getQuoteCont').style.display = 'initial'
-
-}
 
 function revealsideMenu(){
     // $(".sideBar").style.display = 'initial'
     // $(".sideBar").style.animation = 'sidebarAnimation linear'
+    isSidebarOpen = true;
     document.body.style.overflowY = 'hidden'
 
     document.getElementById('sideBar').style.display = 'initial'
@@ -23,6 +20,7 @@ function revealsideMenu(){
 
 
 function hidesideMenu(){
+    isSidebarOpen = false;
     document.body.style.overflowY = 'scroll'
 
     document.getElementById('darkenBG').style.animation = 'darken var(--mainTransition) reverse'
@@ -36,6 +34,34 @@ function hidesideMenu(){
 }
 
 
-function openProductsPage(){
-    location.href = "products.html";
+
+function openGetQuote(){
+    document.body.style.overflowY = 'hidden'
+
+    document.getElementById('getQuoteCont').style.display = 'flex';
+    document.getElementById('getQuoteCont').style.animation = 'getQuoteAnimatiom var(--mainTransition)'
+    setTimeout(() => {
+        document.getElementById('getQuoteCont').style.animation = 'unset' }, 200)
 }
+
+function closeGetQuote(){
+    document.body.style.overflowY = 'scroll'
+    document.getElementById('getQuoteCont').style.animation = 'getQuoteAnimatiom var(--mainTransition) reverse'
+
+    setTimeout(() => {document.getElementById('getQuoteCont').style.display = 'none';},200)
+}
+function openProductsPage(){
+    // location.href = "products.html";
+    window.location.href = 'products.html';
+}
+function openAboutPage(){
+    window.location.href = 'about.html';
+
+}
+
+
+ $(window).resize(function() {
+    if (($(window).width() > 900)&&isSidebarOpen) {
+       hidesideMenu()
+    }})
+
