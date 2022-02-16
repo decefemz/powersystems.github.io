@@ -78,6 +78,6 @@
 
 
 .container-sp{
-  background-image: linear-gradient(180deg, rgb(250, 250, 250) ,  rgba(15, 10, 31, 0)), var(--background4);
+  /* background-image: linear-gradient(180deg, rgb(250, 250, 250) ,  rgba(15, 10, 31, 0)), var(--background4); */
 
 }

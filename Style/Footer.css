@@ -36,6 +36,7 @@ padding-bottom:50px;
 }
 
 
+
 .ourDetails h1{
   font-size: 2.3rem;
   font-family:Montserrat;
@@ -46,10 +47,10 @@ padding-bottom:50px;
   text-align: center;}
 
 .cc{
-  background-color: rgb(5, 5, 82);
+  background-color: var(--whiteHighlight);
   text-align: center;
   font-family: Montserrat;
-  color:var(--whiteHighlight);
+  color:var(--secondaryBlack);
 padding: 5px;
 box-shadow: var(--mainShadow);
 
@@ -57,6 +58,6 @@ box-shadow: var(--mainShadow);
 }
 
 .cc a{
-  color:white;
-  opacity:0.6
+  color:black;
+  opacity:0.9;
 }

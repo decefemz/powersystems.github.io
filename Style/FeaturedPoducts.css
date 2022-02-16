@@ -32,6 +32,18 @@ height: 250px;
 
 
 
+        .ourDetails .p1{
+            font-size: 1.5rem;
+            font-family:Montserrat;
+            font-weight: 200;
+            color: var(--secondaryBlack);
+            text-justify: center;
+            text-align: center;
+            padding:var(--mainPadding);
+            padding-top: 40px;
+            padding-bottom:120px;
+          }
+          
 
 
 .fPH{
@@ -39,8 +51,8 @@ height: 250px;
     /* font-family:Montserrat; */
     padding-left:var(--mainPadding);
     padding-right:var(--mainPadding);
-    background-image: linear-gradient(180deg, #00000000,rgb(250, 250, 250), var(--background4));
-    background-image: linear-gradient(180deg,  rgba(15, 10, 31, 0), rgb(250, 250, 250)), var(--background4);
+    /* background-image: linear-gradient(180deg, #00000000,rgb(250, 250, 250), var(--background4));
+    background-image: linear-gradient(180deg,  rgba(15, 10, 31, 0), rgb(250, 250, 250)), var(--background4); */
 
                       
 }
