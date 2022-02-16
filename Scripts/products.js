@@ -125,7 +125,7 @@ getAllCategories()
 
 
 
-getAllProducts('/Products/All.json')
+getAllProducts('Products/All.json')
 
 
 
@@ -157,7 +157,7 @@ catch (err) {
 
 $(document).on('click','.categoryLinks', function(){
    
-    getAllProducts('/Products/' +this.id+'.json')
+    getAllProducts('Products/' +this.id+'.json')
   
 
   });
