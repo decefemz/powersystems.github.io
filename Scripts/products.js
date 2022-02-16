@@ -82,7 +82,7 @@ async function getAllCategories() {
 function generateProductCard(productID, picturePath, productTitle){
     var productCard = ("<div class = 'product-card' id = " + productID + ">"+
                             "<div class = 'product-image'>"+
-                                "<img src = '" + picturePath +"'>"+
+                                "<img src = " + picturePath +">"+
                             "</div>"+
                             "<div class='product-info'>"+
                                 "<h5>"+productTitle+"</h5><br>"+
