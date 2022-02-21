@@ -11,9 +11,12 @@ label {
 	color: #666;
 	font-size: 10px;
 	font-weight: 500;
+	font-family: m;
 	line-height: 2em;
 	text-transform: uppercase;
 }
+
+
 
 .products {
     margin-left:10px;
@@ -56,8 +59,13 @@ label {
     
 }
 
-.productCont{
 
+.product-info h6{
+    margin-top: 10px;
+    color:var(--secondaryBlack);
+    opacity: .8;}
+
+.productCont{
     padding:var(--mainPadding);
     padding-top:100px;
     display: flex;
@@ -74,6 +82,7 @@ label {
     height: 500px;
     overflow-y: scroll;
     flex-direction: column;
+    background-color: white;
 }
 #categoryHeader{
     font-family: Montserrat;
@@ -137,64 +146,134 @@ label {
 
 #selectCate{
     border: none;
-    text-align: center;
+    /* text-align: center; */
     font-family: Montserrat;
     /* margin:20px;  */
     font-size: 25px;
-    font-weight: 500;
+    /* font-weight: 500; */
+    width:50%;
     padding:0rem
     
 }
 
+.selectCont{
+/* 
+    /* padding-left: var(--mainPadding); */
+    padding-right: var(--mainPadding);
+
+}
 #cartCont{
     position: fixed;
-
     background-color: #00000044;
     width: 100%;
     z-index: 1;
     height: 100vh;
+    /* animation: darken 1s reverse; */
+    display: none;
     /* display: none; */
+}
+
+@keyframes darken {
+
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }
 
 #cartList{
     padding:40px;
     position: fixed;
-    background-color: white;
+    background-color: var(--mainWhite);
+
     padding-top:20px;
     /* padding */
-    width: 30%;
+    width: 50%;
     z-index: 1;
     /* transform: translateX(250px); */
     height: 100vh;
     left: 0%;
     animation-timing-function: ease-in-out;
-    
+    /* animation: cartAnimation 1s; */
+    display: none;
+
     /* display: none; */
 }
 
+#cartList h4{
+    margin-top: 20px;
+    font-family: Montserrat;
+    color:var(--mainBlack);
+position: relative;
+}
+#cartList h6{
+    font-family: Montserrat;
+    color:var(--secondaryBlack);
+    color:var(--mainRed);
+}
+#cartList h4 i{
+    position: absolute;
+    right: 20px;
+}
+#cartList h4 i::before{
+    content: '$';
+}
+
+@keyframes cartAnimation2 {
+    
+  
+
+    to{
+        transform: translateX(-100%); 
+    }
+
+}
+
+@keyframes cartAnimation {
+    
+    /* from{
+        transform: translateX(250px);
+    } */
+
+    to{
+        transform: translateX(-100%); 
+    }
+
+}
+
 #cartList h1{
-    margin-top:30px ;
+    margin-top:30px;
     margin-bottom: 10px;
     font-family: Montserrat;
     font-weight: 200;
 }
 
 #cartListInner{
+    overflow-y: scroll;
+    height: 70vh;
     margin-top: 20px;
     display: flex;
     flex-direction: column;
     width: 100%;
+    background-color: white;
 }
 
 #cartListItem{
-    margin:10px;
+    margin:1px;
     box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.25);
-
+    /* height: 200px; */
     display: flex;
     flex-direction: row;
+    position: relative;
+    height: fit-content;
 }
 
+
+
 #cartItemImage{
+    background-color: white;
     margin: 5px;
     width: 30%;
 }
@@ -204,19 +283,32 @@ label {
 }
 
 #cartItemDesc{
-
+    display: flex;
+    flex-direction: column;
     margin-left: 20px;
-
 }
 #cartItemDesc h1 {
     font-family: Montserrat;
     font-size: 20px;
+    /* line-height: 10px; */
+    color: var(--mainBlack);
 }
 
+#cartItemDesc label{
+    margin-right: 10px;
+    color:var(--secondaryBlack);
+    font-family: Montserrat;
+}
 #cartItemDesc h3 {
     font-size: 15px;
 
 }
+
+.quantCont h5{
+    color:var(--secondaryBlack);
+    margin-top: 10px;
+}
+
 .inputNo{
     border:solid 1px;
     border-color:lightgrey;
@@ -224,8 +316,16 @@ label {
     font-size: 15px;
 }
 #cartListItem button{
-/* margin-left: 90px; */
-position:absolute;
-right: 60px;
-transform: translateY(10px);
-height: 50px;}
+       
+    font-size: 25px;
+    /* transform: translateY(-18px); */
+    position: absolute;
+    color:black;
+    background-color: var(--mainWhite);
+    border-color: var(--mainWhite);
+    /* margin-left: 65px; */
+    right: 20px;
+    bottom:0;
+    font-family: Montserrat;
+    transition: var(--mainTransition);
+}

@@ -7,10 +7,13 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="Scripts/Sidebar.js"></script>
+    <script src="Scripts/Cart.js"></script>
 
     <script src="Scripts/products.js" defer></script>
     <script src="https://kit.fontawesome.com/54081d16ec.js" crossorigin="anonymous"></script>
-<script src="Scripts/Sidebar.js"></script>
+<!-- <script src="Scripts/Sidebar.js"></script> -->
+
+<script src="Scripts/Buttons.js"></script>
 
     <link rel="stylesheet" href="Style.css">
     <link rel="stylesheet" href="Style/Navbar.css">
@@ -25,52 +28,72 @@
 </head>
 
 
-<body>
-    <div id="cartCont" style="display: none;">
+<body >
+    
+  <div class="darkenBG" id = 'darkenBG' onclick="hidesideMenu()"> </div>
+  <div class="sideBar" id = "sideBar">
+    <div>
+      <h1 >MENU</h1>
+      <button onclick="hidesideMenu()"'>&#x2715</button>
+    </div>
+    <ul>
+     
+      <li><a href = "index.html">HOME</a>
+     
+
+      <li><a href="contracting.html">CONTRACTING</a></li>
+
+      <li><a href="about.html" >ABOUT-US</a></li>
+
+   
+
+</div>
+
+    <div id="cartCont" >
+
         <div id="cartList">
             <h1>
-                Quotation List
+                QUOTATION LIST
             </h1>
-            <hr>
             <div id="cartListInner">
-                <div id="cartListItem">
-                    
-
-                    <div id="cartItemImage">
-                        <img src="/Products/Pictures/2gang.jpg" alt="">
-
-                    </div>
-                    <div id="cartItemDesc">
-                        <h1>Title</h1>
-                        <h3>Quantity: <input type="number" class = "inputNo" name="" id="" value="1"></h3>
-                    </div>
-                    <button>x</button>
-                </div>
+                OOPS.  Looks like you havent added anything yet.
             </div>
+
+            <h4>TOTAL: <i id = 'total'>0.00</i></h4>
+            <h6>*Prices are subject to change </h6>
         </div>
+
     </div>
 
-    <button id = 'cart'><i class="fas fa-shopping-cart"></i></button>
+    <button id = 'cart' onclick="cartButton()"><i class="fas fa-shopping-cart"></i></button>
+    <!-- <button id = 'cart' class = 'hide' onclick="hideCartList()" style="display: none;">&#x2715</button> -->
 
     
 
     <header id = 'navBar' >
-        <img src="/Images/Logo/logo-PST.svg" id="logo">
+     
+        <img src="Images/Logo/logo-PST.svg" id="logo">
         
         <ul class="navLinks">
-            <a href="">ABOUT-US</a>
-            <a href="">COTNRACTING</a>
+          <!-- <a href="about.html" >ABOUT-US</a> -->
+          <a href="contracting.html">CONTRACTING</a>
             <a href="index.html">HOME</a>
-            <button class = "contactButton">GET IN TOUCH</button>
+
+            <button class = "contactButton" onclick="smoothScroll(document.getElementById('cc'))">GET IN TOUCH</button>
+            <button id = "hamburger" class = "fas fa-bars" onclick = "revealsideMenu()"></button>
         </ul>
     </header>
-    
-    <h1 id="headingText">Products
-        <select name="categories" id="selectCate" 
-        onChange= "getChosen(this.options[this.selectedIndex].value)"
-        >
 
-        </select>
+    <h1 id="headingText">Products
+    
+        <div class="selectCont">
+            <select name="categories" id="selectCate" 
+            onChange= "getChosen(this.options[this.selectedIndex].value)"
+            >
+    
+            </select>
+        </div>
+       
     </h1>
     <section class="productCont">
         <section class = 'filters'>

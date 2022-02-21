@@ -7,67 +7,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Power Systems Technology-Home</title>
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="Scripts/Sidebar.js"></script>
+    <script src="Scripts/Cart.js"></script>
 
+    <script src="Scripts/products.js" defer></script>
+    <script src="https://kit.fontawesome.com/54081d16ec.js" crossorigin="anonymous"></script>
+<!-- <script src="Scripts/Sidebar.js"></script> -->
 
-    <link rel="stylesheet" href="/Style/Style.css">
-    <link rel="stylesheet" href="/Style/Navbar.css">
-    <link rel="stylesheet" href="/Style/About.css">
-    <link rel="stylesheet" href="/Style/Hero.css">
-    <link rel="stylesheet" href="/Style/Sponsors-bar.css">
-    <link rel="stylesheet" href="/Style/Footer.css">
-    <link rel="stylesheet" href="/Style/Contracting.css">
+    <script src="Scripts/Buttons.js"></script>
 
-    <link rel="stylesheet" href="/Style/Responsive.css">
-  
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="Style/Navbar.css">
+    <link rel="stylesheet" href="Style/Hero.css">
+    <link rel="stylesheet" href="Style/Products.css">
+    <link rel="stylesheet" href="Style/Responsive.css">
+    <link rel="stylesheet" href="Style/About.css">
+    <link rel="stylesheet" href="Style/Section2.css">
+    <link rel="stylesheet" href="Style/Contracting.css">
 
-    <link rel="stylesheet" href="/Style/FeaturedPoducts.css">
-
-    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
-    <script src="/Scripts/Scroll.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="/Scripts/Carousel.js" defer></script>
-    <script src="/Scripts/Buttons.js"></script>
-    <script src="https://kit.fontawesome.com/4a6d3cdf53.js" crossorigin="anonymous"></script>
-
+    <title>Power Systems Technology-Products</title>
 </head>
 
 <body>
 
-  <div class="sideBarCont" id = 'sidebarCont'>
     
-    <div class="sideBar" id = "sideBar">
-      <div>
-        <h1 >MENU</h1>
-        <button onclick="hidesideMenu()" class = 'fas fa-times'></button>
-      </div>
-      <ul>
-        <li><a href="about.html" >ABOUT-US</a></li>
-        <li><a href="index.html"></a></li>
-        <li><a href="products.html">PRODUCTS</a></li>
-
-      </ul>
+  <div class="darkenBG" id = 'darkenBG' onclick="hidesideMenu()"> </div>
+  <div class="sideBar" id = "sideBar">
+    <div>
+      <h1 >MENU</h1>
+      <button onclick="hidesideMenu()"'>&#x2715</button>
     </div>
-  </div>
-  
+    <ul>
+     
+      <li><a href = "index.html">HOME</a>
+     
 
+      <li><a href="contracting.html">CONTRACTING</a></li>
 
+      <li><a href="about.html" >ABOUT-US</a></li>
 
+   
 
+</div>
 
     <header id = 'navBar' >
      
-        <img src="/Images/Logo/logo-PST.svg" id="logo">
+        <img src="Images/Logo/logo-PST.svg" id="logo">
         
         <ul class="navLinks">
           <!-- <a href="about.html" >ABOUT-US</a> -->
+          <a href="contracting.html">CONTRACTING</a>
             <a href="index.html">HOME</a>
-            <a href="products.html">PRODUCTS</a>
 
-            <button class = "contactButton" onclick="smoothScroll(document.getElementById('footer'))">GET IN TOUCH</button>
+            <button class = "contactButton" onclick="smoothScroll(document.getElementById('cc'))">GET IN TOUCH</button>
             <button id = "hamburger" class = "fas fa-bars" onclick = "revealsideMenu()"></button>
         </ul>
     </header>
+
+  
 
       <div class="hero" style="height: fit-content;">
         <h1>ELECTRICAL CONTRACTING</h1>

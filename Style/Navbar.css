@@ -35,6 +35,7 @@ Button{
     border-width: 1px;
     border-color: var(--mainRed);
     transition: var(--mainTransition);
+    cursor: pointer;
 }
 
 Button:hover{

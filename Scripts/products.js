@@ -79,14 +79,16 @@ async function getAllCategories() {
 // }
 
 
-function generateProductCard(productID, picturePath, productTitle){
+function generateProductCard(productID, picturePath, productTitle, productPrice){
     var productCard = ("<div class = 'product-card' id = " + productID + ">"+
                             "<div class = 'product-image'>"+
                                 "<img src = " + picturePath +">"+
                             "</div>"+
                             "<div class='product-info'>"+
-                                "<h5>"+productTitle+"</h5><br>"+
-                                "<button style = 'width:100%'>ADD TO QUOTE</button>"+
+                                "<h5>"+productTitle+"</h5>"+
+                                "<h6>$ "+productPrice+"</h6><br><br>"+
+
+                                "<button class = 'addToCartButton'id = '"+productTitle+"'style = 'width:100%'>ADD TO QUOTE</button>"+
  			                "</div>"+
                         "</div>")
 
@@ -104,7 +106,7 @@ async function getAllProducts(categoryPath){
         var allProducts = ""
 
         for (let j = 0; j < data.Category.length; j++) {
-             allProducts = generateProductCard("id", data.Category[j].path, data.Category[j].title) + allProducts
+             allProducts = generateProductCard("i", data.Category[j].path, data.Category[j].title, '19.99')+ allProducts
         }
 
         products.innerHTML = allProducts;
@@ -138,16 +140,18 @@ getAllProducts('Products/All.json')
 
 
 
+
 if (!(localStorage.getItem("sideBarVar") == " ")){
+
+  document.getElementById('selectCate').value = localStorage.getItem("sideBarVar")
+
+
   getAllProducts('Products/' + localStorage.getItem("sideBarVar") + '.json')
-  // document.getElementById('selectCate').value = localStorage.getItem("sideBarVar")
 
   try {
     //If localStorage supports with the browser
     if (localStorage) {
-        
         localStorage.setItem(" ", sideBarVar);
-        console.log("un-cached")
     }
 }
 catch (err) {
@@ -155,11 +159,13 @@ catch (err) {
 }
 }
 
+
+
 $(document).on('click','.categoryLinks', function(){
    
     getAllProducts('Products/' +this.id+'.json')
-  
-
+    // this.style = 'color:red'
+  // document.getElementsByClassName('categoryLinks')[0].style = 'color:blue'
   });
 
   function getChosen(chosen) {
