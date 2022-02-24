@@ -77,22 +77,22 @@ function cartButton(){
 }
 
 
-// function openGetQuote(){
+ function openGetQuote(){
 
-//     document.body.style.overflowY = 'hidden'
-//     document.getElementById('getQuoteCont').style.display = 'flex';
-//     document.getElementById('getQuoteCont').style.animation = 'getQuoteAnimatiom var(--mainTransition)'
-//     setTimeout(() => {
-//         document.getElementById('getQuoteCont').style.animation = 'unset' }, 200)
+     document.body.style.overflowY = 'hidden'
+   document.getElementById('getQuoteCont').style.display = 'flex';
+     document.getElementById('getQuoteCont').style.animation = 'getQuoteAnimatiom var(--mainTransition)'
+     setTimeout(() => {
+         document.getElementById('getQuoteCont').style.animation = 'unset' }, 200)
 
-// }
+ }
 
-// function closeGetQuote(){
-//     document.body.style.overflowY = 'scroll'
-//     document.getElementById('getQuoteCont').style.animation = 'getQuoteAnimatiom var(--mainTransition) reverse'
+ function closeGetQuote(){
+     document.body.style.overflowY = 'scroll'
+     document.getElementById('getQuoteCont').style.animation = 'getQuoteAnimatiom var(--mainTransition) reverse'
 
-//     setTimeout(() => {document.getElementById('getQuoteCont').style.display = 'none';},200)
-// }
+     setTimeout(() => {document.getElementById('getQuoteCont').style.display = 'none';},200)
+ }
 function openProductsPage(){
     // location.href = "products.html";
     window.location.href = 'products.html';
